@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>searchgene</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
+></script>
+
+
+<script src="js/jquery_3.2.1.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+
+<style>
+        /* about tool start */
+
+        .about {
+            border: 3.5px solid #5271ff;
+            margin: 0% 15% 0px 15%;
+            margin-bottom: 6.80%;
+            margin-top: 6.80%;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        .about-1 {
+            border: 3.5px solid #5271ff;
+            margin: 0% 16% 0px 16%;
+            margin-bottom: 5.25%;
+            margin-top: 5.25%;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        .about:hover {
+            box-shadow: 0 0 20px #5271FF;
+            border-radius: 4px 4px 4px 4px !important;
+        }
+
+
+        .about-1:hover {
+            box-shadow: 0 0 20px #5271FF !important;
+            border-radius: 4px 4px 4px 4px !important;
+        }
+
+        .about-tool-tittle {
+            margin-bottom: -0.5%;
+            margin-top: 0px;
+            width: 100%;
+            color: white;
+            text-align: center;
+            background-color: #5271FF;
+            font-size: 32px;
+            padding: 9px;
+            border-radius: 5px 5px 0px 0px !important;
+        }
+
+        .about-tool-tittle-examples {
+            margin-left: 6%;
+            margin-bottom: 7.5%;
+            margin-top: 50px;
+            width: 14%;
+            color: white;
+            text-align: center;
+            background-color: #5271FF;
+            font-size: 21px;
+            padding: 6px;
+            border-radius: 5px 5px 5px 5px !important;
+        }
+
+        .About-section-Contain {
+            background-color: white;
+            color: black;
+            padding: 12px 0px 0px 19px;
+            padding: 0%;
+        }
+
+        .About-section-heading {
+            padding: 2.5px;
+            justify-content: center;
+            text-align: center;
+            background-color: #5271ff;
+            color: white;
+            margin-bottom: -8px;
+        }
+
+
+        /* about tool end */
+
+
+        /* search start */
+
+        .search-category-1 {
+            border-radius: 5px 5px 5px 5px;
+            margin-top: 3%;
+            margin-left: 15%;
+            padding: .5% 0.5% .5% 0.5% !important;
+            text-align: center;
+            height: 42px;
+            width: 150px;
+            border-color: #5271ff;
+            border-width: 2px;
+        }
+
+        .search-category-4 {
+            display: flex;
+            flex-direction: row;
+            gap: 2%;
+        }
+
+        .search-category-3 {
+            margin-top: 3%;
+            /* margin-left: 18%; */
+        }
+
+        .submit-search-box:hover {
+            background-color: #5271ff;
+            color: white;
+        }
+
+        .submit-search-box {
+            margin-left: 7px;
+            width: 95px;
+            padding: 7% 15% 7% 15% !important;
+            border-color: #5271ff;
+            border-width: 2px;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        .autocomplete-items {
+            max-height: 399px;
+            overflow-y: auto;
+        }
+
+        .autocomplete-items div {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px solid #d4d4d4;
+            width: 280%;
+        }
+
+        .autocomplete {
+            margin-top: 3%;
+            /* margin-left: 12%; */
+        }
+
+        .autocomplete-search-box {
+            height: 42px;
+            width: 427px;
+            margin-left: -15px;
+            border-radius: 5px 5px 5px 5px;
+            padding: 3% 3% 3% 3%;
+            border-color: #5271ff;
+            border-width: 2px;
+            text-align: center !important;
+        }
+
+        #all_Inputautocomplete-list {
+            margin-top: -3px;
+            width: 409px;
+            overflow: wrap !important;
+            box-sizing: content-box;
+        }
+
+        .search-card {
+            display: flex;
+            flex-direction: row;
+            gap: 2%;
+            margin: 27px 53px 26px 8px;
+        }
+
+        .search-card-1 {
+            text-align: center;
+            border: 2px #5271FF solid;
+        }
+
+        .card-body {
+            padding: 13% 0% 4% 0%;
+        }
+
+        /* search end */
+
+        .foooter {
+            left: 0 !important;
+            bottom: 0 !important;
+            width: 100%;
+            min-width: 0;
+        }
+</style>
+</head>
+
+
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+
+    <!-- navbar section start -->
+    <nav class="navbar py-0 navbar-expand-lg navbar-box">
+        <div class="container-fluid" style="background-color: azure;">
+            <img src="https://genespectrum.in/wp-content/uploads/2022/11/cropped-Untitled-design-300x88.png" class="img-fluid navbar-brand" height="80px" width="200px" alt="" srcset="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0  " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    
+                    <li class="nav-item mx-2">
+                        <a href=""></a><button type="button" class="btn btn-info"><a href="/loginIN/" style="text-decoration:none"> Home
+                        </a></button>
+                    </li>
+                    <li class="nav-item">
+                        
+                         <div class="user">
+                         <a href="/search/" ></a><button type="button" class="btn btn-info"><a href="/search/" style="text-decoration:none"> Search </a> </button> 
+                         </div>
+                                             </li>
+                    <li class="nav-item mx-2 ">
+                        
+                           <div class="user">
+                           <a href="/"></a><button type="button" class="btn btn-info" ><a href="/" style="text-decoration:none"> Logout  </a> </button>
+                         </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <table class="table table-bordered">
+        <tr>
+            <th style="background-color: yellow;">Chr</th>
+            <th style="background-color: yellow;">Start</th>
+            <th style="background-color: yellow;">End</th>
+            <th style="background-color: yellow;">Ref</th>
+            <th style="background-color: yellow;">Alt</th>
+            <th style="background-color: yellow;">Ref_Gene</th>
+            <th style="background-color: yellow;">Func_refGene</th>
+            <th style="background-color: yellow;">ExonicFunc_refGene</th>
+            <th style="background-color: green;">dbSNP_ID</th>
+            <th style="background-color: green;">ClinVar Sig</th>
+            <!-- <th style="background-color: green;">InterVar:InterVar_and_Evidence</th> -->
+            <th style="background-color: green;">Freq_gnomAD_genome_ALL</th>
+            <th style="background-color: green;">Freq_esp6500siv2_all</th>
+            <th style="background-color: green;">Freq_1000g2015aug_all</th>
+            <th style="background-color: green;">CADD_raw</th>
+            <th style="background-color: green;">CADD_phred</th>
+            <th style="background-color: green;">SIFT_score</th>
+            <th style="background-color: yellow;">OMIM</th>
+           
+        </tr>
+        {% for variant in data %}
+            <tr>
+                <td>{{ variant.Chr }}</td>
+                <td>{{ variant.Start }}</td>
+                <td>{{ variant.End }}</td>
+                <td>{{ variant.Ref }}</td>
+                <td>{{ variant.Alt }}</td>
+                <td>{{ variant.Ref_Gene }}</td>
+                <td>{{ variant.Func_refGene }}</td>
+                <td>{{ variant.ExonicFunc_refGene }}</td>
+                <td>{{ variant.dbSNP_ID}}</td>
+                <td>{{ variant.ClinVar_Sig }}</td>
+                <!-- <td>{{ variant.InterVar_InterVar_and_Evidence }}</td> -->
+                <td>{{ variant.Freq_gnomAD_genome_ALL }}</td>
+                <td>{{ variant.Freq_esp6500siv2_all }}</td>
+                <td>{{ variant.Freq_1000g2015aug_all }}</td>
+                <td>{{ variant.CADD_raw }}</td>
+                <td>{{ variant.CADD_phred }}</td>
+                <td>{{ variant.SIFT_score }}</td>
+                <td>{{ variant.OMIM }}</td>
+              
+            </tr>
+        {% endfor %}
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Gene</title>
+</head>
+<body>
+    <h1>Search Gene</h1>
+    <form action="{% url 'search_results' %}" method="GET">
+        <input type="text" name="q" value="{{ query }}" placeholder="Search Gene...">
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html> -->

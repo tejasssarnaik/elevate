@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="icon" href="./images/mutation.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="./css/styling.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+
+    <style>
+        .foooter {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            min-width: 0;
+        }
+
+        .section-logreg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+        }
+
+        .logreg-container {
+            margin-top: 2%;
+            width: 400px;
+            height: 550px;
+            background: #ebf2fa;
+            border-radius: 6px;
+            box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.6),
+                -5px -2px 15px rgba(0, 0, 0, 0.6);
+            transition: all 0.5s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logreg-container:not(:hover) {
+            box-shadow: none;
+        }
+
+        .buttom-box {
+            margin: 25px auto 10px auto;
+            width: 220px;
+            background: #eee;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            border-radius: 30px;
+            transition: all 0.5s ease-in-out;
+            border: 2px solid #5271ff;
+        }
+
+        .toggle-btn {
+            width: 50%;
+            border: 0;
+            outline: none;
+            height: 45px;
+            padding: 10px;
+            position: relative;
+            background: transparent;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            /* font-style: italic; */
+            text-transform: uppercase;
+        }
+
+        #btn {
+            position: absolute;
+            width: 110px;
+            background: #5271ff;
+            height: 100%;
+            left: 0;
+            border-radius: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* login form */
+        #form-login {
+            width: 300px;
+            margin: 20px auto;
+            position: absolute;
+            left: 50px;
+        }
+
+
+
+        /* register form */
+        #form-register {
+            position: absolute;
+            left: 450px;
+            width: 300px;
+            margin: 5px auto;
+        }
+
+        .input-field {
+            background: #ebf2fa;
+            width: 100%;
+            height: 35px;
+            padding: 5px;
+            margin: 10px 0;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .check {
+            margin: 10px 0;
+        }
+
+        .submit-btn {
+            margin-bottom: 10px;
+            margin-top: 20px;
+            width: 100%;
+            height: 45px;
+            padding: 10px;
+            background: #5271ff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            /* font-style: italic; */
+            text-transform: uppercase;
+            outline: none;
+            border: none;
+            border-radius: 6px;
+            letter-spacing: 1.5px;
+        }
+    </style>
+
+
+
+</head>
+
+
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+
+    <!-- navbar section start -->
+    <nav class="navbar py-0 navbar-expand-lg navbar-box">
+        <div class="container-fluid" style="background-color: azure;">
+            <img src="https://genespectrum.in/wp-content/uploads/2022/11/cropped-Untitled-design-300x88.png" class="img-fluid navbar-brand" height="80px" width="200px" alt="" srcset="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0  " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    
+                    <li class="nav-item mx-2">
+                        <a href=""></a><button type="button" class="btn btn-info"><a href="/loginIN/" style="text-decoration:none"> Home
+                        </a></button>
+                    </li>
+                    <li class="nav-item">
+                        
+                         <div class="user">
+                         <a href="/searchnew/" ></a><button type="button" class="btn btn-info"><a href="/searchnew/" style="text-decoration:none"> Search </a> </button> 
+                         </div>
+                                             </li>
+                    <li class="nav-item mx-2 ">
+                        
+                           <div class="user">
+                           <a href="/"></a><button type="button" class="btn btn-info" ><a href="/" style="text-decoration:none"> Logout  </a> </button>
+                         </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- navbar section end -->
+
+    <!------------------------login and registration form start ---------------------->
+    <section class="section-logreg">
+        <div class="logreg-container">
+
+            <div class="buttom-box">
+                <div id="btn"></div>
+                <button class="toggle-btn" style="color:white;" id="login" onclick="login();">
+                    login
+                </button>
+                <button class="toggle-btn" id="register" onclick="reg();">
+                    register
+                </button>
+            </div>
+            <!-- form login method-: post added -->
+
+            <div>
+                <form action="register_login.php" id="form-login" method="POST">
+                    <input type="text" placeholder="Email or Username" name="email_username" class="input-field"
+                        required />
+                    <input type="password" placeholder="Password" name="password" class="input-field" required />
+                    <button type="submit" value="login" class="submit-btn" name="login" id="login-btn">login</button>
+                    <p>Don't have an account? <a href="#" onclick="reg();">Sign up</a></p>
+                    <a href="mailto:rarevardb@genespectrum.in">Forget Password?</a>
+                </form>
+            </div>
+            <div>
+
+                <!-- form Register -->
+                <form action="register_login.php" id="form-register" method="POST">
+                    <input type="text" placeholder="Full Name" name="full_name" class="input-field" maxlength="15"
+                        required />
+                    <input type="text" placeholder="Username" name="username" class="input-field" maxlength="8"
+                        required />
+                    <input type="email" placeholder="Email" name="email" class="input-field" maxlength="40" required />
+                    <input type="text" placeholder="Institute Name" name="institute" class="input-field" required />
+                    <input type="text" placeholder="Designation" class="input-field" name="designation" maxlength="40"
+                        required />
+                    <!-- <input type="text" placeholder="Country" class="input-field" name="country" maxlength="40"
+                        required /> -->
+                    <input type="password" placeholder="Password" name="password" class="input-field" maxlength="20"
+                        required />
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" required id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            By registering, you agree to <a
+                                href="https://genespectrum.in/rarevardb-privacy-policy/">Privacy Policy</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="submit-btn" id="register-btn" name="register" value="signup">
+                        Register
+                    </button>
+                    <p>
+                        Already have an account? <a href="#" onclick="login();">Login</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!------------------------login and registration form end ---------------------->
+
+  
+<!-- js for toggle-btn -->
+
+<script>
+    let x = document.getElementById("btn");
+    let y = document.getElementById("login");
+    let z = document.getElementById("register");
+    let form_login = document.getElementById("form-login");
+    let form_register = document.getElementById("form-register");
+
+    function login() {
+        x.style.left = "0px";
+        y.style.color = "#fff";
+        z.style.color = "#000";
+        form_login.style.left = "50px";
+        form_register.style.left = "450px";
+    }
+    function reg() {
+        x.style.left = "110px";
+        y.style.color = "#000";
+        z.style.color = "#fff";
+        form_login.style.left = "-450px";
+        form_register.style.left = "50px";
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-------------------------------------------------------footer start--------------------------------------------------------- -->
+    <!-- footer start -->
+
+    <footer class=" foooter d-flex flex-wrap justify-content-between align-items-center mt-4 ml-3 pt-3" style="background-color: azure;">
+        <!-- <p class="col-md-4 mb-0 text-body-secondary">© 2023 Company, Inc</p> -->
+        <a target="_blank" href="https://genespectrum.in/"> <img src="https://rarevardb.genespectrum.in/images/Logo_rework.png"
+                class=" d-flex align-items-center justify-content-center  link-body-emphasis text-decoration-none"
+                height="40px" width="150px" alt="" srcset="" style="margin-left: 10%;"> </a>
+  
+        <section class=" footer-icons" style="padding: 0% 0% 0% 22% !important;">
+            <!-- Facebook -->
+            <a class="btn btn-link btn-floating btn-lg text-dark " href="https://www.facebook.com/genespectrum"
+                target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+  
+            <!-- Twitter -->
+            <a class="btn btn-link btn-floating btn-lg text-dark" href="https://twitter.com/genespectrum"
+                target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+  
+            <!-- Instagram -->
+            <a class="btn btn-link btn-floating btn-lg text-dark " href="https://www.instagram.com/genespectrum/"
+                target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+  
+            <!-- Linkedin -->
+            <a class="btn btn-link btn-floating btn-lg text-dark" href="https://www.linkedin.com/company/genespectrum"
+                target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+        </section>
+        <!-- Section: Social media -->
+  
+        <ul class="nav col-md-4 mx-4 justify-content-end">
+            <a class="nav-item" href="tel:917021386045" style="padding: 0px 6px 0px 0px;">+91 7021386045</a> |
+            <a class="nav-item " href="mailto:rarevardb@genespectrum.in" style="padding: 0px 0px 0px 6px;">
+                rarevardb@genespectrum.in</a>
+  
+        </ul>
+    </footer>
+    <!-- footer end -->
+  
+</body>
+</html>
+
+

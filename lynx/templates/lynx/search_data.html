@@ -1,0 +1,64 @@
+<!-- search_data.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Data</title>
+</head>
+<body>
+    <h1>Search Data</h1>
+    <form method="GET" action="{% url 'search_data' %}">
+        <label for="start">Start Value:</label>
+        <input type="text" id="start" name="start" required><br>
+
+        <label for="chr">Chr Value:</label>
+        <input type="text" id="chr" name="chr" required><br>
+
+        <label for="ref">Ref Value:</label>
+        <input type="text" id="ref" name="ref" required><br>
+
+        <button type="submit">Search Data</button>
+    </form>
+
+    <!-- Display search results here -->
+    {% if search_results %}
+    <h2>Search Results</h2>
+    <ul>
+        {% for result in search_results %}
+        <li>{{ result }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
+<!-- search_data.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Data</title>
+</head>
+<body>
+    <h1>Search Data</h1>
+    <form method="GET" action="{% url 'search_data' %}">
+        <label for="start">Start Value:</label>
+        <input type="text" id="start" name="start" required><br>
+
+        <label for="chr">Chr Value:</label>
+        <input type="text" id="chr" name="chr" required><br>
+
+        <label for="ref">Ref Value:</label>
+        <input type="text" id="ref" name="ref" required><br>
+
+        <button type="submit">Search Data</button>
+    </form>
+
+    <!-- Display search results here -->
+    {% if search_results %}
+    <h2>Search Results</h2>
+    <ul>
+        {% for result in search_results %}
+        <li>{{ result }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>

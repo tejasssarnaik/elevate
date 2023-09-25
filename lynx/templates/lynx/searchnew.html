@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search New</title>
+    <link rel="icon" href="./images/mutation.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="./css/styling.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+
+    <style>
+        /* Instead of using fixed pixels */
+        .container {
+            width: 960px;
+        }
+
+        /* Use percentages for flexible layouts */
+        .container {
+            width: 100%;
+        }
+        /* Default styles for all screen sizes */
+        .container {
+            width: 100%;
+        }
+
+        /* Apply styles for screens with a maximum width of 768px */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+        }
+
+        /* Apply styles for screens with a maximum width of 480px */
+        @media (max-width: 480px) {
+            .container {
+                width: 80%;
+            }
+        }
+
+
+        .foooter {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            min-width: 0;
+        }
+
+        .section-logreg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+        }
+
+        .logreg-container {
+            margin-top: 2%;
+            width: 400px;
+            height: 550px;
+            background: #ebf2fa;
+            border-radius: 6px;
+            box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.6),
+                -5px -2px 15px rgba(0, 0, 0, 0.6);
+            transition: all 0.5s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logreg-container:not(:hover) {
+            box-shadow: none;
+        }
+
+        .buttom-box {
+            margin: 25px auto 10px auto;
+            width: 220px;
+            background: #eee;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            border-radius: 30px;
+            transition: all 0.5s ease-in-out;
+            border: 2px solid #5271ff;
+        }
+
+        .toggle-btn {
+            width: 50%;
+            border: 0;
+            outline: none;
+            height: 45px;
+            padding: 10px;
+            position: relative;
+            background: transparent;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            /* font-style: italic; */
+            text-transform: uppercase;
+        }
+
+        #btn {
+            position: absolute;
+            width: 110px;
+            background: #5271ff;
+            height: 100%;
+            left: 0;
+            border-radius: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* login form */
+        #form-login {
+            width: 300px;
+            margin: 20px auto;
+            position: absolute;
+            left: 50px;
+        }
+
+
+
+        /* register form */
+        #form-register {
+            position: absolute;
+            left: 450px;
+            width: 300px;
+            margin: 5px auto;
+        }
+
+        .input-field {
+            background: #ebf2fa;
+            width: 100%;
+            height: 35px;
+            padding: 5px;
+            margin: 10px 0;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .check {
+            margin: 10px 0;
+        }
+
+        .submit-btn {
+            margin-bottom: 10px;
+            margin-top: 20px;
+            width: 100%;
+            height: 45px;
+            padding: 10px;
+            background: #5271ff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            /* font-style: italic; */
+            text-transform: uppercase;
+            outline: none;
+            border: none;
+            border-radius: 6px;
+            letter-spacing: 1.5px;
+
+            /* Default styles for all screen sizes */
+                .container {
+                    width: 100%;
+                }
+
+                /* Apply styles for screens with a maximum width of 768px */
+                @media (max-width: 768px) {
+                    .container {
+                        width: 90%;
+                    }
+                }
+
+                /* Apply styles for screens with a maximum width of 480px */
+                @media (max-width: 480px) {
+                    .container {
+                        width: 80%;
+                    }
+                }
+
+                }
+    </style>
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Include jQuery UI and jQuery -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<!-- Include jQuery UI library -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+<style>
+        /* about tool start */
+        /* Instead of using fixed pixels */
+        .container {
+            width: 960px;
+        }
+
+        /* Use percentages for flexible layouts */
+        .container {
+            width: 100%;
+        }
+
+
+        .about {
+            border: 3.5px solid #5271ff;
+            margin: 0% 15% 0px 15%;
+            margin-bottom: 6.80%;
+            margin-top: 6.80%;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        .about-1 {
+            border: 3.5px solid #5271ff;
+            margin: 0% 16% 0px 16%;
+            margin-bottom: 5.25%;
+            margin-top: 5.25%;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        .about:hover {
+            box-shadow: 0 0 20px #5271FF;
+            border-radius: 4px 4px 4px 4px !important;
+        }
+
+
+        .about-1:hover {
+            box-shadow: 0 0 20px #5271FF !important;
+            border-radius: 4px 4px 4px 4px !important;
+        }
+
+        .about-tool-tittle {
+            margin-bottom: -0.5%;
+            margin-top: 0px;
+            width: 100%;
+            color: white;
+            text-align: center;
+            background-color: #5271FF;
+            font-size: 32px;
+            padding: 9px;
+            border-radius: 5px 5px 0px 0px !important;
+        }
+
+        .about-tool-tittle-examples {
+            margin-left: 6%;
+            margin-bottom: 7.5%;
+            margin-top: 50px;
+            width: 14%;
+            color: white;
+            text-align: center;
+            background-color: #5271FF;
+            font-size: 21px;
+            padding: 6px;
+            border-radius: 5px 5px 5px 5px !important;
+        }
+
+        .About-section-Contain {
+            background-color: white;
+            color: black;
+            padding: 12px 0px 0px 19px;
+            padding: 0%;
+        }
+
+        .About-section-heading {
+            padding: 2.5px;
+            justify-content: center;
+            text-align: center;
+            background-color: #5271ff;
+            color: white;
+            margin-bottom: -8px;
+        }
+
+
+        /* about tool end */
+
+
+        /* search start */
+
+        .search-category-1 {
+            border-radius: 5px 5px 5px 5px;
+            margin-top: 3%;
+            margin-left: 15%;
+            padding: .5% 0.5% .5% 0.5% !important;
+            text-align: center;
+            height: 42px;
+            width: 150px;
+            border-color: #5271ff;
+            border-width: 2px;
+        }
+
+        .search-category-4 {
+            display: flex;
+            flex-direction: row;
+            gap: 2%;
+        }
+
+        .search-category-3 {
+            margin-top: 3%;
+            /* margin-left: 18%; */
+        }
+
+        .submit-search-box:hover {
+            background-color: #5271ff;
+            color: white;
+        }
+
+        .submit-search-box {
+            margin-left: 7px;
+            width: 95px;
+            padding: 7% 15% 7% 15% !important;
+            border-color: #5271ff;
+            border-width: 2px;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        .autocomplete-items {
+            max-height: 399px;
+            overflow-y: auto;
+        }
+
+        .autocomplete-items div {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px solid #d4d4d4;
+            width: 280%;
+        }
+
+        .autocomplete {
+            margin-top: 3%;
+            /* margin-left: 12%; */
+        }
+
+        .autocomplete-search-box {
+            height: 42px;
+            width: 427px;
+            margin-left: -15px;
+            border-radius: 5px 5px 5px 5px;
+            padding: 3% 3% 3% 3%;
+            border-color: #5271ff;
+            border-width: 2px;
+            text-align: center !important;
+        }
+
+        #all_Inputautocomplete-list {
+            margin-top: -3px;
+            width: 409px;
+            overflow: wrap !important;
+            box-sizing: content-box;
+        }
+
+        .search-card {
+            display: flex;
+            flex-direction: row;
+            gap: 2%;
+            margin: 27px 53px 26px 8px;
+        }
+
+        .search-card-1 {
+            text-align: center;
+            border: 2px #5271FF solid;
+        }
+
+        .card-body {
+            padding: 13% 0% 4% 0%;
+        }
+
+        /* search end */
+
+        .foooter {
+            left: 0 !important;
+            bottom: 0 !important;
+            width: 100%;
+            min-width: 0;
+        }
+</style>
+</head>
+
+
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+
+    <!-- navbar section start -->
+    <nav class="navbar py-0 navbar-expand-lg navbar-box">
+        <div class="container-fluid" style="background-color: azure;">
+            <img src="https://genespectrum.in/wp-content/uploads/2022/11/cropped-Untitled-design-300x88.png" class="img-fluid navbar-brand" height="80px" width="200px" alt="" srcset="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0  " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    
+                    <li class="nav-item mx-2">
+                        <a href=""></a><button type="button" class="btn btn-info"><a href="/loginIN/" style="text-decoration:none"> Home
+                        </a></button>
+                    </li>
+                    <li class="nav-item">
+                        
+                         <div class="user">
+                         <a href="/searchnwe/" ></a><button type="button" class="btn btn-info"><a href="/searchnew/" style="text-decoration:none"> Search </a> </button> 
+                         </div>
+                                             </li>
+                    <li class="nav-item mx-2 ">
+                        
+                           <div class="user">
+                           <a href="/"></a><button type="button" class="btn btn-info" ><a href="/" style="text-decoration:none"> Logout  </a> </button>
+                         </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- navbar section end -->
+
+    <!-- about section start --> <br><br>
+
+    <div class="about">
+        <div class="About-section-heading" style="border-radius: 0px !important;">
+            <h2> Search </h2>
+        </div>
+
+            
+                <!-- another search start -->
+                <div class="search-category-4">
+                    <form action="{% url 'search_results' %}" method="get" id="searchForm">
+                 
+                        <!-- Another Search Button Start-->
+                        <div class="search-category-4">
+                            <form action="{% url 'search_results' %}" method="get" id="searchForm">
+                                <select class="selType search-category-1" id="selType" name="selType" onchange="enableSearch()">
+                                    <option disabled="disabled" selected="selected">Select the field</option>
+                                    <option value="gene">Ref_Gene</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                                <table id=""></table>
+                                <div class="search-category-3">
+                                    <input placeholder="Search for keyword" class="main-InputCls autocomplete-search-box" type="text" name="q" id="searchInput" disabled>
+                                    <script>
+                                        $(document).ready(function() {
+                                            // Replace 'refGeneData' with the actual dataset of Ref_Gene values from your server
+                                            var refGeneData = [
+                                                "SAMD11",
+                                                "DHDDS",
+                                                "RPE65",
+                                                "ABCA4",
+                                                "PRPF3",
+                                                "CRB1",
+                                                "FLVCR1",
+                                                "USH2A",
+                                                "SMAD4",
+                                                "BRCA1",
+                                                "BRCA2",
+                                                "ALK",
+                                                // Add more Ref_Gene values as needed
+                                            ];
+                                            $("#searchInput").autocomplete({
+                                                source: function(request, response) {
+                                                    // Filter the dataset to find values that start with the user's input
+                                                    var userInput = request.term.toLowerCase();
+                                                    var filteredData = $.grep(refGeneData, function(value) {
+                                                        return value.toLowerCase().startsWith(userInput);
+                                                    });
+                                
+                                                    // Wrap the matched portion in <strong> tags to bold it
+                                                    var formattedData = filteredData.map(function(value) {
+                                                        var startIndex = value.toLowerCase().indexOf(userInput);
+                                                        var boldValue = value.substring(0, startIndex) + '<strong>' + value.substring(startIndex, startIndex + userInput.length) + '</strong>' + value.substring(startIndex + userInput.length);
+                                                        return boldValue;
+                                                    });
+                                
+                                                    response(formattedData);
+                                                },
+                                                open: function(event, ui) {
+                                                    // Remove the default highlight class
+                                                    $(".ui-menu-item-wrapper").removeClass("ui-state-focus");
+                                                },
+                                                select: function(event, ui) {
+                                                    // Set the selected value without the <strong> tags
+                                                    this.value = ui.item.label.replace(/<\/?strong>/g, '');
+                                                    return false;
+                                                },
+                                                minLength: 1 // Minimum input length to trigger autocomplete
+                                            }).data("ui-autocomplete")._renderItem = function(ul, item) {
+                                                // Create a custom item rendering function
+                                                var innerHtml = item.label;
+                                                return $("<li>")
+                                                    .append("<div>" + innerHtml + "</div>")
+                                                    .appendTo(ul);
+                                            };
+                                        });
+                                    </script>
+                                </div>
+                                
+                               
+                                <div class="search-category-3">
+                                    <input type="submit" class="btn btn-primary btn-lg" value="Search" onclick="return validateSearch()">
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <style>
+                            /* Responsive styles for the container */
+                            .search-category-4 {
+                                text-align: center;
+                            }
+                        
+                            /* Position input and button properly on small screens */
+                            @media (max-width: 768px) {
+                                .search-category-3 {
+                                    margin-top: 10px;
+                                }
+                        
+                                .search-category-3 input[type="text"],
+                                .search-category-3 input[type="submit"] {
+                                    width: 100%;
+                                }
+                            }
+                        </style>
+                        <script>
+                            function validateSearch() {
+                                var searchInput = document.getElementById("searchInput").value.trim();
+                                
+                                // Check if the search input is empty
+                                if (searchInput === "") {
+                                    alert("Please enter a keyword before searching.");
+                                    return false; // Prevent form submission
+                                }
+                                
+                                // If the input is not empty, allow the form submission
+                                return true;
+                            }
+                        </script>
+                      
+                    </form>
+                
+            </div>
+            
+
+            <script>
+                function enableSearch() {
+                    var selType = document.getElementById("selType");
+                    var searchInput = document.getElementById("searchInput");
+                    var searchButton = document.querySelector(".submit-search-box[type='submit']");
+            
+                    if (selType.value !== "Select the field") {
+                        searchInput.disabled = false;
+                        searchButton.disabled = false;
+                    } else {
+                        searchInput.disabled = true;
+                        searchButton.disabled = true;
+                    }
+                }
+            </script>
+            
+
+
+
+            
+            <div class="about-1">
+                <div class="About-section-heading" style="border-radius: 0px !important;">
+                    <h4> Examples </h4>
+                </div>
+                <div class="About-section-Contain">
+                    <table class="table table-hover">
+                        <tbody>
+                            <tr>
+                                <th scope="row" style="text-align: center;">Gene</th>
+                                <td> <a href="/prpf3/">PRPF3</a></td>
+                                <td> <a href="/dhdds/">DHDDS </a></td>
+                                <td> <a href="/samd11/">SAMD11 </a></td>
+                                <td> <a href="/crb1/">CRB1 </a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <style>
+                /* Responsive styles for smaller screens */
+                @media screen and (max-width: 768px) {
+                    .table {
+                        width: 100%;
+                        display: block;
+                    }
+                    .table th,
+                    .table td {
+                        width: 100%;
+                        display: block;
+                    }
+                    .table td {
+                        text-align: left;
+                    }
+                }
+            </style>
+            
+
+
+
+        </div>
+    </div>
+
+    
+
+
+
+
+
+    
+    <!-------------------------------------------------------footer start--------------------------------------------------------- -->
+    <!-- footer start -->
+
+    <footer class=" foooter d-flex flex-wrap justify-content-between align-items-center mt-4 ml-3 pt-3" style="background-color: azure;">
+        <!-- <p class="col-md-4 mb-0 text-body-secondary">© 2023 Company, Inc</p> -->
+        <a target="_blank" href="https://genespectrum.in/"> <img src="https://rarevardb.genespectrum.in/images/Logo_rework.png"
+                class=" d-flex align-items-center justify-content-center  link-body-emphasis text-decoration-none"
+                height="40px" width="150px" alt="" srcset="" style="margin-left: 10%;"> </a>
+  
+        <section class=" footer-icons" style="padding: 0% 0% 0% 22% !important;">
+            <!-- Facebook -->
+            <a class="btn btn-link btn-floating btn-lg text-dark " href="https://www.facebook.com/genespectrum"
+                target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+  
+            <!-- Twitter -->
+            <a class="btn btn-link btn-floating btn-lg text-dark" href="https://twitter.com/genespectrum"
+                target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+  
+            <!-- Instagram -->
+            <a class="btn btn-link btn-floating btn-lg text-dark " href="https://www.instagram.com/genespectrum/"
+                target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+  
+            <!-- Linkedin -->
+            <a class="btn btn-link btn-floating btn-lg text-dark" href="https://www.linkedin.com/company/genespectrum"
+                target="_blank" role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+        </section>
+        <!-- Section: Social media -->
+  
+        <ul class="nav col-md-4 mx-4 justify-content-end">
+            <a class="nav-item" href="tel:917021386045" style="padding: 0px 6px 0px 0px;">+91 7021386045</a> |
+            <a class="nav-item " href="mailto:rarevardb@genespectrum.in" style="padding: 0px 0px 0px 6px;">
+                rarevardb@genespectrum.in</a>
+  
+        </ul>
+    </footer>
+    <!-- footer end -->
+  
+
+
+</body>
+</html>

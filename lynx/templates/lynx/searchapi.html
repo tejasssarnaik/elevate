@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+      
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>searchapi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+rel="stylesheet"
+/>
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
+></script>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid" style="background-color: azure;">
+          <a class="navbar-brand"> <img src="https://genespectrum.in/wp-content/uploads/2022/11/cropped-Untitled-design-300x88.png" alt="" height="60px"></a>
+          
+            
+
+          
+        </div>
+      </nav>
+
+      <nav id="nav" class="navbar navbar-dark bg-dark p-2">
+        <a class="navbar-item nav-link logoFont text-light" href="/">
+          <span id="logo">RareVarDB.info</span>
+        </a>
+      </nav>
+
+      <div class="information-container wrapper"><section class="block col-12"><div><div class="info"><hgroup class="main"><h2 class="title"><!-- react-text: 46 -->RareVarDB.info API<!-- /react-text --><span><small></section></div>
+
+        <form method="get">
+          <label for="url">Enter a URL:</label>
+          <input type="text" id="url" name="url" placeholder="http://127.0.0.1:8000/genesearch/exceldatas/" value="{{ url }}">
+          <button type="submit">Add</button>
+      </form>
+    
+    <ul id="url"></ul>
+
+    
+        <div class="container">
+       
+          
+          
+           <form action=" " method="get" style="text-align: center;">
+            
+            <div class="form-floating mb-3">
+              <input type="text" name="Start" class="form-control"  placeholder="Enter Start Value">
+              <label for="start_value">Start Value:</label>
+            </div>
+            
+            <div class="form-floating mb-3">
+              <input type="text" name="Chr" class="form-control"  placeholder="Enter Chr Value">
+              <label for="chr_value">Chr Value:</label>
+            </div>
+            
+            <div class="form-floating mb-3">
+              <input type="text" name="Ref" class="form-control"  placeholder="Enter Ref Value">
+              <label for="Ref_value">Ref Value:</label>
+            </div>
+            <br><br>
+            <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="submit"> Execute</button>
+            </div>
+  
+          </form> 
+  
+    </div>
+    <br><hr>
+       
+       
+   
+    
+  
+
+    
+      
+      
+
+      
+ 
+
+   <!-- {{data}}
+   -->
+        
+        <div id="tabs">
+            <ul>
+                <li><a href="#Disease">ANNOTATION</a></li>
+                <li><a href="#Variant">VARIANT</a></li>
+            </ul>
+    
+            <!-- Content for the "Annotation" tab -->
+            <div id="Disease">
+                <!-- Disease table here -->
+                <table class="table table-bordered">
+                    <!-- Add table headers and rows using Django template tags -->
+                    <tr>
+                      <th >Chr</th>
+                      <th >Start</th>
+                      <th >End</th>
+                      <th >Ref</th>
+                      <th >Alt</th>
+                      <th >Ref_Gene</th>
+                      <th >Func_refGene</th>
+                      <th >ExonicFunc_refGene</th>
+                      <th >OMIM</th>
+                    </tr>
+                    {% for variant in data %}
+                        <tr>
+                          <td>{{ variant.Chr }}</td>
+                          <td>{{ variant.Start }}</td>
+                          <td>{{ variant.End }}</td>
+                          <td>{{ variant.Ref }}</td>
+                          <td>{{ variant.Alt }}</td>
+                          <!-- <td>{{ variant.Ref_Gene }}</td> -->
+                          <td>
+                              {% if variant.Ref_Gene %}
+                                  <a href="https://www.ncbi.nlm.nih.gov/gene/?term={{ variant.Ref_Gene }}" target="_blank" style="color: blue;">{{ variant.Ref_Gene }}</a>
+                              {% else %}
+                                  {{ variant.Ref_Gene }}
+                              {% endif %}
+                          </td>
+                          <td>{{ variant.Func_refGene }}</td>
+                          <td>{{ variant.ExonicFunc_refGene }}</td>
+                          <!-- <td>{{ variant.OMIM }}</td> -->
+                          <td>
+                              {% if variant.OMIM %}
+                                  <a href="https://www.omim.org/entry/{{ variant.OMIM }}?search={{ variant.OMIM }}&highlight={{ variant.OMIM }}" target="_blank" style="color: blue;">{{ variant.OMIM }}</a>
+                              {% else %}
+                                  {{ variant.OMIM }}
+                              {% endif %}
+                          </td>
+                      
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+    
+            <!-- Content for the "Variant" tab -->
+            <div id="Variant">
+                <!-- Variant table here -->
+                <table class="table table-bordered">
+                    <!-- Add table headers and rows using Django template tags -->
+                    <tr>
+                      <th >dbSNP_ID</th>
+                      <th >ClinVar Sig</th>
+                      <th >Ref_Gene</th>
+                      <th >InterVar_InterVar </th>
+                      <th >Freq_gnomAD_ <br> genome_ALL</th>
+                      <th >Freq_esp6500 <br> siv2_all</th>
+                      <th >Freq_1000g <br> 2015aug_all</th>
+                      <th >CADD_ <br> raw</th>
+                      <th >CADD_ <br> phred</th>
+                      <th >SIFT_ <br> score</th>  
+                    </tr>
+                    {% for variant in data %}
+                        <tr>
+                          <td>
+                            {% if variant.dbSNP_ID %}
+                                <a href="https://www.ncbi.nlm.nih.gov/snp?term={{ variant.dbSNP_ID }}" target="_blank" style="color: blue;">{{ variant.dbSNP_ID }}</a>
+                            {% else %}
+                                {{ variant.dbSNP_ID }}
+                            {% endif %}
+                        </td>
+                        <td>{{ variant.ClinVar_Sig }}</td>
+                        <!-- <td>{{ variant.Ref_Gene }}</td> -->
+                        <td>
+                            {% if variant.Ref_Gene %}
+                                <a href="https://www.ncbi.nlm.nih.gov/gene/?term={{ variant.Ref_Gene }}" target="_blank" style="color: blue;">{{ variant.Ref_Gene }}</a>
+                            {% else %}
+                                {{ variant.Ref_Gene }}
+                            {% endif %}
+                        </td>
+                        
+                        <td>{{ variant.InterVar_InterVar }}</td>
+                        <td>{{ variant.Freq_gnomAD_genome_ALL }}</td>
+                        <td>{{ variant.Freq_esp6500siv2_all }}</td>
+                        <td>{{ variant.Freq_1000g2015aug_all }}</td>
+                        <td>{{ variant.CADD_raw }}</td>
+                        <td>{{ variant.CADD_phred }}</td>
+                        <td>{{ variant.SIFT_score }}</td> 
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    
+        <!-- Include your script to activate the tabs -->
+        <script>
+            $(function () {
+                $("#tabs").tabs();
+            });
+        </script>
+    
+       
+        
+      
+      
+        
+
+    </body>
+</html>
+
+
